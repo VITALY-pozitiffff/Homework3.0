@@ -31,9 +31,9 @@ public class Main {
 
         byte studentsLyudmila = 23;
         short studentsAnna = 27;
-        int stusentsKati = 30;
+        int studentsKati = 30;
         int totalSheets = 480;
-        int sheetStunets =totalSheets/ (studentsLyudmila + studentsAnna + stusentsKati);
+        int sheetStunets =totalSheets/ (studentsLyudmila + studentsAnna + studentsKati);
         System.out.println("На каждого ученика рассчитано "+ sheetStunets + " листов бумаг ");
 
         System.out.println("Задача 4");
@@ -75,13 +75,13 @@ public class Main {
         int eggs1=70; //в 1 яйце грамм
         int totalEggs=eggs*eggs1;// на 4 яйца грамм
         int totalCocktail=totalBanana+tootalGrammMilk+totalIceCream2Gramm+totalEggs;
-        int kg1=1000;// 1 кг 1000 грамм
-        float totalKg=(float) totalCocktail/kg1;
-        System.out.println("Вес спортзавтрака составил  " + totalCocktail+" грамм = "+ totalKg+" кг");
+        // Переводим общий вес в килограммы
+        float totalKg=(float) totalCocktail/1000;
+        System.out.println("Вес спортивного завтрака составил  " + totalCocktail+" грамм = "+ totalKg+" кг");
         System.out.println("Задача 7");
         int goalKg = 7;// Цель 7 кг скинуть
-        int kg=1000;// 1 кг это 1000 грамм
-        int goalGramm= kg* goalKg;
+        // Переводим цель из кг в граммы
+        int goalGramm= goalKg*1000;
                 int losinhWeight250=250;
         int losingWeight500=500;
         int days250=goalGramm/losinhWeight250;
@@ -100,19 +100,14 @@ public class Main {
             double newMashaSalary=mashaSalary+(mashaSalary*percentRaised/100);
             double newDenisSalary=denisSalary+(denisSalary*percentRaised/100);
             double newKrisSalary = krisSalary+(krisSalary*percentRaised/100);
-            int god=12;//12 месяцев в году
-            // Считаем зарплату годовую до повышения
-            double yearSalaryMasha=mashaSalary*12;
-            double yearSalaryDenis=denisSalary*12;
-            double yearSalaryKris=krisSalary*12;
-            //Считаем годовую зарплату после повышения
-            double newYearSalaryMasha=newMashaSalary*12;
-            double newYearSalaryDenis=newDenisSalary*12;
-            double newYearSalaryKris=newKrisSalary*12;
-            //Расчитываем разницу зарплаты в годовом доходе
-            double yearDifferenceMasha=newYearSalaryMasha-yearSalaryMasha;
-            double yearDifferenceDenis=newYearSalaryDenis-yearSalaryDenis;
-            double yearDifferenceKris=newYearSalaryKris-yearSalaryKris;
+
+
+            //Рассчитываем разницу зарплаты в годовом доходе
+
+        double yearDifferenceMasha=(  newMashaSalary*12)-(mashaSalary*12);
+        double yearDifferenceDenis=(newDenisSalary*12)-(denisSalary*12);
+        double yearDifferenceKris=(newKrisSalary*12)-(krisSalary*12);
+
             System.out.println("Маша теперь получает "+ newMashaSalary+ " рублей. Годовой доход вырос на "+ yearDifferenceMasha);
             System.out.println("Денис теперь получает "+ newDenisSalary+ " рублей. Годовой доход вырос на "+ yearDifferenceDenis);
             System.out.println("Кристина теперь получает "+ newKrisSalary+ " рублей. Годовой доход вырос на "+ yearDifferenceKris);
